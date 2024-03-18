@@ -4,6 +4,8 @@
 
 #content-area {
     background-color: white;
+    margin: 1em;
+    /* position: absolute; */ /*or else margin left bigger than right*/
 }
 
 header {
@@ -24,7 +26,7 @@ header {
     color: blueviolet;
     font-size: 3rem;
     display: inline-block;
-    margin: 16px 0px;
+    margin: 8px;
 }
 
 #date{
@@ -34,23 +36,30 @@ header {
     font-size: 1rem;
 }
 
+ul {
+    padding: 0%;
+}
+
 nav li{
     display: inline-block;
-    background-color: rgb(255, 231, 200);
-    width: 25%;
-    
+    background-color: rgb(244, 233, 255);
+    width: 24%;
+    text-align: center;
 }
 
 nav a{
     display: block;
     line-height: 2rem;
-    width: 25%;
+}
 
+nav a:hover {
+ background-color: blueviolet;
+ color: white;
 }
 
 a{
     text-decoration: none;
-    color: green;
+    color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,4 +74,47 @@ body {
     background-color: rgb(255, 231, 200);
 }
 
+main {
+    float: left;
+    width: 75%
+}
 
+.current-story {
+    float: right;
+}
+
+/* .current-story img {
+    z-index: -1;
+    position: relative;
+} this here only makes image disappear*/
+
+.current-story figcaption {
+    text-align: center;
+    color: black;
+    background-color: rgba(0,  0,  0,  0.40);
+    margin-top: -1.7em;
+    /* z-index: 1; */
+}
+
+aside {
+    display: inline-block;
+    width: 25%
+}
+
+.story-preview{
+    display: inline-block;
+}
+
+.story-preview a{
+    display: block;
+    text-align: center;
+    line-height: 4rem; /* really stupid way of doing this (no space between caption and pic) but hey at least it works */
+    height: 5rem;
+}
+
+footer {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
